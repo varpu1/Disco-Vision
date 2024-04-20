@@ -1,6 +1,7 @@
 body {
-	background: #eeeeee;
+	background: #200864;
 	font-family: tahoma, verdana, sans serif;
+  color:#e0e0e0
 }
 
 canvas {
@@ -17,15 +18,36 @@ h1{
   font-family: 'Monoton', cursive;
   text-align: center;
   font-size: 3rem;
+  background:radial-gradient(circle, rgb(0, 208, 255), rgb(239, 19, 255),#eee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 #controls{
   /* margin-left: 1rem; */
+  color:black;
   display: block;
-  margin-left: 12.5%;
+  /* margin-left: 12.5%; */
+  margin:auto;
+  margin-bottom:50px;
   border: 2px solid black;
   width:75%;
+  height:225px;
   padding:2%;
+  background-color:rgba(255, 255, 255, 0.63)
+}
+#shadow {
+  content: "";  
+  position: relative;
+  margin:auto;
+  width:79vw;
+  height:275px;
+  inset: -2px; /* control the spread */
+  transform: translate(-2.5vw, -250px); /*control the offsets */
+  z-index: -1; /* place the element behind */
+  background: linear-gradient(to bottom right, rgb(0, 208, 255), rgb(239, 19, 255));/* your gradient here */;
+  filter: blur(10px); /* control the blur */
 }
 #type{
   padding:5px;

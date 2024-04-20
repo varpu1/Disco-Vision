@@ -38,6 +38,7 @@ circles = document.querySelector("#circles");
 noise = document.querySelector("#noise");
 duration = document.querySelector("#timing");
 
+// playButton = document.querySelector("#playButton");
 
 // 1 - here we are faking an enumeration
 const DEFAULTS = Object.freeze({
@@ -46,7 +47,7 @@ const DEFAULTS = Object.freeze({
 
 
 function init() {
-    console.log("init called");
+    // console.log("init called");
     audio.setupWebaudio(DEFAULTS.sound1);
     console.log(`Testing utils.getRandomColor() import: ${utils.getRandomColor()}`);
     let canvasElement = document.querySelector("canvas"); // hookup <canvas> element
@@ -82,6 +83,7 @@ function setupUI(canvasElement) {
 
     //add .onclick to play button
     playButton.onclick = e => {
+        console.log("playing")
         console.log(`audioCtx.state before=${audio.audioCtx.state}`);
 
         //check if context is in suspended state (autoplay policy)
